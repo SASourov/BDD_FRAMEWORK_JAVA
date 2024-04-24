@@ -45,6 +45,6 @@ public class homeStep {
     @And("user click login button")
     public void click_login_button() throws InterruptedException{
         home_page.click_login_button();
-        driver.quit();
+
     }
 }
