@@ -1,6 +1,6 @@
 Feature: Automation Practice Website
 
-  @login
+  @home
   Scenario: Login Functionality
     Given user open website
     When user click login menu
@@ -17,4 +17,11 @@ Feature: Automation Practice Website
     And user click continue button
     Then user get assertion
 
+
+  @product
+  Scenario: Add to cart product
+    Given user click on product menu
+    When user click on view product button
+    And user click on add button
+    And user click continue shopping button
 

@@ -10,7 +10,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
+import java.util.Random;
+
+
 public class homePage {
+
+    public int generateRandomNumber() {
+        Random random = new Random();
+        return random.nextInt(1000);
+    }
     @FindBy(xpath = "//a[@href='/login']")
     public WebElement loginMenu;
 
@@ -74,6 +83,7 @@ public class homePage {
     @FindBy(xpath = "//header[@id='header']/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[10]/a[1]")
     public WebElement visibleText;
 
+
     public homePage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
@@ -89,7 +99,7 @@ public class homePage {
     }
 
     public void set_email() throws InterruptedException{
-        emailAddress.sendKeys("shakil@3mail.com");
+        emailAddress.sendKeys("test@"+ generateRandomNumber() +"mail.com");
         Thread.sleep(2000);
     }
 
